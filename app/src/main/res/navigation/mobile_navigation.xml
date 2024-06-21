@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.herdialfachri.pangankita.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/action_navigation_home_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.herdialfachri.pangankita.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_onlineClasifyActivity"
+            app:destination="@id/onlineClasifyActivity" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_howToUseActivity"
+            app:destination="@id/howToUseActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.herdialfachri.pangankita.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_loginActivity"
+            app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_contactFragment"
+            app:destination="@id/contactFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_shareFragment"
+            app:destination="@id/shareFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_copyrightFragment"
+            app:destination="@id/copyrightFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_questionsFragment"
+            app:destination="@id/questionsFragment"
+            app:enterAnim="@anim/slide_right"
+            app:popEnterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.herdialfachri.pangankita.ui.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.herdialfachri.pangankita.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileActivity"
+            app:destination="@id/editProfileActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.herdialfachri.pangankita.ui.profile.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.herdialfachri.pangankita.ui.profile.ShareFragment"
+        android:label="fragment_share"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.herdialfachri.pangankita.ui.profile.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <activity
+        android:id="@+id/editProfileActivity"
+        android:name="com.herdialfachri.pangankita.ui.profile.EditProfileActivity"
+        android:label="activity_edit_profile"
+        tools:layout="@layout/activity_edit_profile" />
+    <activity
+        android:id="@+id/onlineClasifyActivity"
+        android:name="com.herdialfachri.pangankita.ui.ml.online.OnlineClasifyActivity"
+        android:label="activity_online_classify"
+        tools:layout="@layout/activity_online_classify" />
+    <activity
+        android:id="@+id/howToUseActivity"
+        android:name="com.herdialfachri.pangankita.ui.ml.HowToUseActivity"
+        android:label="activity_how_to_use"
+        tools:layout="@layout/activity_how_to_use" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.herdialfachri.pangankita.ui.home.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/copyrightFragment"
+        android:name="com.herdialfachri.pangankita.ui.profile.CopyrightFragment"
+        android:label="fragment_copyright"
+        tools:layout="@layout/fragment_copyright" />
+    <fragment
+        android:id="@+id/questionsFragment"
+        android:name="com.herdialfachri.pangankita.ui.profile.QuestionsFragment"
+        android:label="fragment_questions"
+        tools:layout="@layout/fragment_questions" />
+</navigation>
